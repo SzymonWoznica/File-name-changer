@@ -17,6 +17,9 @@ namespace ConsoleApp2
             Console.Write("Enter type files: ");
             string typeFiles = Console.ReadLine();
 
+            // Enter base file name
+            Console.Write("Enter base files name: ");
+            string baseName = Console.ReadLine();
 
             // Create the object which get information about dircetory
             DirectoryInfo di;
@@ -62,11 +65,11 @@ namespace ConsoleApp2
             // Change file name 
             foreach(FileInfo file in files)
             {
-                file.MoveTo(path + @"\" + n + "." + typeFiles, true);
+                file.MoveTo(path + @"\" + baseName + n + "." + typeFiles, true);
                 n++;
             }
 
-            Console.WriteLine("The " + files.Length + " file(s) changed name.");
+            Console.WriteLine($"The {files.Length} file(s) changed name.");
         }
     }
 }
