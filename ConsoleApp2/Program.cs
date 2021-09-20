@@ -62,7 +62,6 @@ namespace ConsoleApp2
             // Change file name 
             foreach(FileInfo file in files)
             {
-                //file.MoveTo(@"C:\test\t\new.txt");
                 file.MoveTo(path + @"\" + n + "." + typeFiles, true);
                 n++;
             }
